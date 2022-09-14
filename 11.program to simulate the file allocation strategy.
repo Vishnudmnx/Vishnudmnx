@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+int files[50], indexBlock[50], indBlock, n;
+void recurse1();
+void recurse2();
+
+void recurse1(){
+    printf("Enter the index block: ");
+    scanf("%d", &indBlock);
+    if (files[indBlock] != 1){
+        printf("Enter the number of blocks and the number of files needed for the index %d on the disk: ", indBlock);
+        scanf("%d", &n);
+    }
+    else{
+        printf("%d is already allocated\n", indBlock);
+        recurse1();
+    }
+    recurse2();
+}
